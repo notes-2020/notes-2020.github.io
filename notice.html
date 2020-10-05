@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+ <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="shortcut icon" href="https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2589960038,766561005&fm=26&gp=0.jpg">
+<title>相关公告·学习笔记</title>
+	<head>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+  integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP"
+  crossorigin="anonymous"
+  />
+
+  <style>
+    .footer {
+      /*页脚样式，仿Google页脚*/
+      line-height: 40px;
+      background: #f2f2f2;
+      border-top: 1px solid #e4e4e4;
+      font-size: 10pt;
+      color: #222;
+    }
+
+    .footer text,
+    .footer a {
+      /*页脚链接和文字*/
+      margin-left: 30px;
+      color: #666;
+      display: inline-block;
+      line-height: 40px;
+      font-family: sans-serif;
+      font-size: 10pt;
+      margin-right: 30px;
+      text-decoration: none;
+    }
+
+    .footer>a:visited {
+      color: #609;
+    }
+
+    #banner {
+      /*横幅宽高和背景壁纸*/
+      background-image: url(https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=707045001,2409988238&fm=26&gp=0.jpg);
+        height: 50vh;
+      width: 100%;
+    }
+
+    .banner-title {
+      font-weight: 400;
+    }
+
+    .content-view {
+      padding-top: 64px;
+    }
+
+    /*body{
+          background-color: #f1f1f1;
+        }*/
+
+    .no-title-weight {
+      font-weight: 400;
+    }
+
+    .mdui-list-item-icon,
+    .mdui-list-item-content {
+      color: rgba(0, 0, 0, 0.54);
+    }
+
+    .happy-birthday p {
+      display: block;
+    }
+
+    div[exam] {
+      height: 50vh;
+      background: rgba(23, 23, 23, 0.06);
+    }
+
+    ::selection {
+      background-color: pink;
+    }
+    /*Material Design新版的Banner，来自https://codepen.io/dffzmxj/pen/LYVooPR，抄袭Vuetify样式*/
+    .new-banner{
+        position: sticky;
+        top: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 16px 8px 16px 16px;
+        align-items: center;
+        display: flex;
+    }
+    .new-banner>.banner__icon{
+        margin-right: 16px;
+        flex: 0 0 auto;
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        overflow: hidden;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 50%;
+    }
+    .new-banner>p{
+        flex: 1 1 auto;
+        margin-left: 8px;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        line-height: 20px;
+    }
+    .new-banner>.banner__actions{
+        margin-left: 90px;
+        display: inline-flex;
+        align-items: center;
+        align-self: flex-end;
+        justify-content: flex-end;
+        margin-bottom: -8px;
+    }
+    /*单行Banner*/
+    .new-banner.single-line{
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+    .new-banner.single-line{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .new-banner.single-line>.banner__actions{
+        margin-bottom: 0;
+        align-self: center;
+    }
+    /*使桌面端persistent*/
+    @media screen and (max-width: 600px){
+        .new-banner{
+            position: relative;
+        }
+    }
+  </style>
+</head>
+  <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+<body>
+  <header id="appbar" class="mdui-appbar mdui-appbar-fixed">
+    <!-- 导航栏 -->
+    <div class="mdui-toolbar mdui-color-blue-200">
+      <button mdui-drawer="{target:'#sidebar',overlay:true,swipe:true}" mdui-tooltip="{content:'侧边栏'}" class="mdui-btn mdui-btn-icon mdui-ripple">
+        <i class="mdui-icon material-icons">menu</i></button>
+      <div class="mdui-typo-title" id="appbar-title">学习笔记</div>
+      <div class="mdui-toolbar-spacer"></div>
+    </div>
+  </header>
+  <div id="sidebar" class="mdui-drawer mdui-drawer-full-height mdui-drawer-close mdui-color-white">
+    <!-- 侧边栏 -->
+    <div>
+      <ul class="mdui-list">
+        <li class="mdui-subheader">站内链接</li>
+        <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://notes-2020.github.io';">
+          <i class="mdui-list-item-icon mdui-icon material-icons">notes</i>
+          <div class="mdui-list-item-content">本站主页</div>
+        </li>
+        <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://notes-2020.github.io/notice.html';">
+          <i class="mdui-list-item-icon mdui-icon material-icons">flags</i>
+          <div class="mdui-list-item-content">相关公告</div>
+        </li>        
+        <li class="mdui-list-item mdui-ripple" onclick="window.location.href='https://notes-2020.github.io/learn.html';">
+          <i class="mdui-list-item-icon mdui-icon material-icons">library_books</i>
+          <div class="mdui-list-item-content">笔记页面</div>
+        </li>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="shadow-line">
+    <!-- 当浏览器划过此处时，自动给导航栏加入阴影 -->
+  </div>
+      </footer>
+  </aside>
+  <main class="content-view mdui-container">
+    <!--内容-->
+    <br>
+    <div class="mdui-card">
+      <center>
+        <h3>相关公告</h3>
+      </center>
+      <div class="mdui-list">
+  <a href="https://notes-2020.github.io/notice/1.html" class="mdui-list-item mdui-ripple"><h5>【学习笔记】QQ交流群</h5></a>
+	    </div>
+      </div>
+    <!-- 页脚信息 -->
+	<center>
+     <p class="mdui-text-color-grey-400">© 2020·学习笔记</p>
+   </center>
+  </footer>
+  <!-- JavaScript文件引入(CDN) -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="./resources/js/mdui.min.js"></script>
+</body>
+<script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+  integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+  crossorigin="anonymous"
+></script>																		      
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+</html>
